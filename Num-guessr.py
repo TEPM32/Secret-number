@@ -8,4 +8,4 @@ if guess == secret:
 elif guess > 50 or guess < 0:
     print("Try with the number within the given range.")
 else:
-    print("Your guess is incorrect.")
+    print("Your guess is incorrect. It was not a number " + str(guess))
