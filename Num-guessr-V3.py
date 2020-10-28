@@ -1,6 +1,7 @@
 import random
 
 sn = random.randint(1, 50)
+attempts = 0
 guess = -3
 
 for a in range(5):
