@@ -17,7 +17,6 @@ for score_dict in score_list:
     print(your_name + " - " + str(score_dict["attempt"]) + " attempt, date: " + score_dict.get("date")
           + ", secret number: ")
 
-
 while True:
     guess = int(input("Please, enter number between 1 and 50: "))
     attempt += 1
