@@ -1,1 +1,1 @@
-[51]
+[{"attempts": 7, "date": "2020-11-11 13:25:40.433239", "player_name": "XXX", "secret_number": 42, "wrong_guess": 6},{"attempts": 3, "date": "2020-11-11 13:25:40.433239", "player_name": "XXX", "secret_number": 42, "wrong_guess": 6},{"attempts": 42, "date": "2020-11-11 13:25:40.433239", "player_name": "XXX", "secret_number": 42, "wrong_guess": 6}]

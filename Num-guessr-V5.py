@@ -11,12 +11,7 @@ with open("Scoresheet.txt", "r") as score_file:
     score_list = json.loads(score_file.read())
     print("Top scores: " + str(score_list))
 
-# print(sorted(score_list.attempts()))
-# sorted_score_list = sorted(score_list, key=lambda k: k['attempts'])[:3]
-sorted_score_list = sorted(score_list.attempts, reverse=True, key=lambda x: x[1])
-
-for element in sorted_score_list:
-    print(element[:3])
+sorted_score_list = sorted(score_list, key=lambda k: k['attempts'])[:3]
 
 for score_dict in score_list:
     score_text = "{0} - {1} attempts, date: {2}. Secret number: {3}. Wrong guesses: {4}".format(score_dict.get("player_name"),
@@ -32,7 +27,7 @@ while True:
 
     if guess == secret:
         score_list.append({"attempts": attempts, "date": str(datetime.datetime.now()), "player_name": player,
-                           "secret_number": secret, "wrong_guess": wrong_guess})
+                           "secret_number": secret, "wrong_guess": attempts - 1})
 
         with open("Scoresheet.txt", "w") as score_file:
             score_file.write(json.dumps(score_list))
